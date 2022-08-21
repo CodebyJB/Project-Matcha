@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Matcha</title>
+    <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="logic.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="slideshow_container">
+        <figure class="img_container"></figure>
+        <i class="fa-solid fa-angle-left left"></i>
+        <i class="fa-solid fa-angle-right right"></i>
+      </div>
+    </header>
+    <div class="slideshow_title_container">
+      <div class="letter_container"></div>
+      <h1>MATCHA</h1>
+    </div>
+
+    <div class="lightbox_container">
+      <figure class="lightbox_img"></figure>
+      <p class="icons">
+        <i class="fa-regular fa-circle-xmark close_x"></i>
+        <i class="fa-solid fa-cloud-arrow-down download"></i>
+        <i class="fa-solid fa-magnifying-glass-plus zoom_in"></i>
+        <i class="fa-solid fa-magnifying-glass-minus zoom_out"></i>
+      </p>
+    </div>
+
+    <main>
+      <article id="kontakt">
+        <div>
+          <h2>Kontakt</h2>
+          <p>Wir freuen uns auf Deine Kontaktaufnahme!</p>
+          <form novalidate id="form">
+            <p>
+              <input
+                type="text"
+                name="Vorname"
+                placeholder="Vorname"
+                data-pattern="names"
+                class="text vname"
+                required
+              />
+            </p>
+            <p>
+              <input
+                type="text"
+                name="Nachname"
+                placeholder="Nachname"
+                data-pattern="names"
+                class="text nname"
+                required
+              />
+            </p>
+            <p>
+              <input
+                type="tel"
+                name="Tel"
+                placeholder="Telefon"
+                data-pattern="numbers"
+                class="num"
+                required
+              />
+            </p>
+            <p>
+              <input
+                type="email"
+                name="eMail"
+                placeholder="E-Mail"
+                class="email"
+                data-pattern="email"
+                required
+              />
+            </p>
+            <p>
+              <textarea
+                rows="5"
+                placeholder="Anfrage, Kommentar usw."
+                name="anfrage"
+                class="text request"
+                data-pattern="names"
+                required
+              ></textarea>
+            </p>
+            <p>
+              <input
+                type="checkbox"
+                id="dsvgo"
+                data-pattern="checked"
+                name=" dsvgo "
+                value="anerkannt "
+                required
+              />
+              Ja, ich habe die <a href="#.html ">Datenschutzerklärung</a> zur
+              Kenntnis genommen und erteile die Einwilligung in die Erhebung und
+              Nutzung meiner vorstehend eingegebenen Daten.
+            </p>
+            <button class="send">
+              Absenden<i class="fa-regular fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

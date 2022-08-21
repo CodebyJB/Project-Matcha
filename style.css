@@ -1,0 +1,242 @@
+/* font: montserrat */
+@font-face {
+  font-family: "Montserrat 400";
+  src: local(""),
+    url("./fonts/montserrat-v24-latin-regular.woff2") format("woff2"),
+    url("./fonts/montserrat-v24-latin-regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Montserrat 700";
+  src: local(""), url("./fonts/montserrat-v24-latin-700.woff2") format("woff2"),
+    url("./fonts/montserrat-v24-latin-700.woff") format("woff");
+}
+/* font: dancing-script */
+@font-face {
+  font-family: "Dancing Script";
+  src: local(""),
+    url("./fonts/dancing-script-v23-latin-regular.woff2") format("woff2"),
+    url("../fonts/dancing-script-v23-latin-regular.woff") format("woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font: 1rem "Montserrat 400", serif;
+}
+body {
+  position: relative;
+}
+
+/* slider img ----------- */
+header img {
+  width: 100%;
+  display: block;
+  animation: opacity 4s;
+}
+@keyframes opacity {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.slideshow_container {
+  max-width: 80vw;
+  margin: 50px auto;
+  position: relative;
+  background-color: black;
+  display: flex;
+}
+@media only screen and (min-width: 900px) {
+  .slideshow_container {
+    max-width: 700px;
+  }
+}
+.left,
+.right {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 2rem 1.5rem;
+  color: #89ad4e9a;
+  font-size: 4rem;
+  transition: 0.5s ease;
+  display: flex;
+  align-items: center;
+}
+.left {
+  left: 0;
+}
+.right {
+  right: 0;
+}
+.left:hover,
+.right:hover {
+  color: #89ad4e;
+}
+@media only screen and (max-width: 500px) {
+  .left,
+  .right {
+    font-size: 2rem;
+  }
+}
+
+/* slider title ----------- */
+.slideshow_title_container {
+  max-width: 80vw;
+  position: relative;
+  display: flex;
+}
+.letter_container {
+  color: #89ad4e;
+  margin: 100px auto;
+}
+h1 {
+  font-size: 8rem;
+  color: #89ad4e9a;
+  opacity: 0.8;
+  font-family: "Dancing Script", cursive;
+  position: relative;
+}
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 6rem;
+  }
+}
+h3 {
+  font-size: 2.5rem;
+  color: #89ad4ee5;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  animation: opacity 2s;
+}
+@keyframes opacity {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* lightbox --------- */
+.lightbox_container {
+  padding: 50px;
+}
+.lightbox_img {
+  max-width: 900px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.lightbox_img img {
+  width: 150px;
+  height: 250px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.6s;
+}
+.lightbox_img img:hover {
+  opacity: 1;
+}
+.lightbox_img .img_modal {
+  transform: scale(3);
+  opacity: 1;
+  position: absolute;
+  top: 30%;
+  z-index: 100;
+}
+.icons {
+  opacity: 0;
+  visibility: hidden;
+  font-size: 2.5rem;
+  color: #89ad4e9a;
+  cursor: pointer;
+  transition: 0.5s ease;
+  display: flex;
+  gap: 1rem;
+  align-self: flex-start;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+}
+.icons_show {
+  opacity: 1;
+  visibility: visible;
+}
+.close_x,
+.download,
+.zoom_in,
+.zoom_out {
+  z-index: 101;
+}
+.close_x:hover,
+.download:hover,
+.zoom_in:hover,
+.zoom_out:hover {
+  color: #89ad4e;
+}
+.lightbox_img .img_zoom_in {
+  transform: scale(4);
+}
+.lightbox_img .img_zoom_out {
+  transform: scale(2);
+}
+.modalBackground {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsla(0, 0%, 0%, 0.473);
+}
+
+/* contact ------- */
+#kontakt {
+  max-width: 600px;
+  margin: 50px auto;
+}
+#kontakt h2 {
+  padding-bottom: 1rem;
+}
+form input,
+form textarea,
+.send {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  font: 1rem "Montserrat 400", serif;
+  border-radius: 5px;
+  border: 1px solid grey;
+  outline: none;
+}
+#dsvgo {
+  width: auto;
+}
+.send {
+  background-color: #89ad4e9a;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.send:hover {
+  background-color: #89ad4e;
+}
+.send i {
+  padding-left: 15px;
+}
+.valid {
+  border-color: green;
+  color: green;
+}
+.invalid {
+  border-color: rgb(243, 35, 70);
+  color: rgb(243, 35, 70);
+}
